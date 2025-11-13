@@ -1,0 +1,136 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    background-color: rgb(44, 44, 44);
+    width: clamp(60%, 500px, 300px);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.322);
+
+    #question {
+        width: 100%;
+        font-size: 30px;
+        color: rgb(161, 161, 161);
+    }
+
+    #answers {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .answer {
+            background-color: rgb(59, 59, 59);
+            width: 100%;
+            height: 40px;
+            list-style: none;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+
+            &:hover {
+                background-color: rgb(133, 133, 133);
+            }
+        }
+    }
+
+    .btn-box {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            background-color: steelblue;
+            width: 40%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+
+            &:hover {
+                background-color: rgb(58, 110, 153);
+            }
+        }
+
+        #next {
+            margin-left: auto;
+        }
+
+        #end {
+            display: none;
+            background-color: rgb(16, 43, 66);
+        }
+    }
+
+}
+
+#scoreboard {
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    #scoreboard-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+
+        #score {
+            font-family: monospace;
+            color: steelblue;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 0 auto;
+            background-color: steelblue;
+            width: 40%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+
+            &:hover {
+                background-color: rgb(58, 110, 153);
+            }
+        }
+    }
+}
